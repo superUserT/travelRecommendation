@@ -1,0 +1,23 @@
+{
+  "name": "travelrecommendation",
+  "version": "1.0.0",
+  "description": "A travel booking website",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superUserT/travelRecommendation.git"
+  },
+  "author": {
+    "name": "Thabiso Rantsho",
+    "email": "thabiso.rantsho@Umuzi.org",
+    "github": "https://github.com/superUserT"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/superUserT/travelRecommendation/issues"
+  },
+  "homepage": "https://github.com/superUserT/travelRecommendation#readme"
+}
