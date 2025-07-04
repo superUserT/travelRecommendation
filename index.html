@@ -2,11 +2,156 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>TravelBloom - Discover Your Next Adventure</title>
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <h1>Home</h1>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo" onclick="showPage('home')">TravelBloom</a>
+        <ul class="nav-links">
+          <li>
+            <a href="#" class="active" onclick="showPage('home')">Home</a>
+          </li>
+          <li><a href="#about" onclick="showPage('about')">About Us</a></li>
+          <li>
+            <a href="#contact" onclick="showPage('contact')">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Home Page -->
+    <section id="home" class="page active">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Discover Your Next Adventure</h1>
+          <p>
+            Explore breathtaking destinations and immerse yourself in diverse
+            cultures around the world
+          </p>
+
+          <!-- Search Container -->
+          <div class="search-container">
+            <form class="search-form" id="searchForm">
+              <div style="position: relative; flex: 1; min-width: 300px">
+                <input
+                  type="text"
+                  class="search-input"
+                  placeholder="Search destinations, cities, or experiences..."
+                  id="searchInput"
+                />
+                <div class="search-results" id="searchResults"></div>
+              </div>
+              <button
+                type="button"
+                class="search-btn"
+                onclick="performSearch()"
+              >
+                Search
+              </button>
+              <button type="button" class="clear-btn" onclick="clearSearch()">
+                Clear
+              </button>
+            </form>
+          </div>
+
+          <!-- Social Media Links -->
+          <div class="social-links">
+            <a href="#" class="social-link" title="Facebook">📘</a>
+            <a href="#" class="social-link" title="Instagram">📷</a>
+            <a href="#" class="social-link" title="Twitter">🐦</a>
+            <a href="#" class="social-link" title="YouTube">📺</a>
+          </div>
+
+          <!-- Book Now Button -->
+          <a href="#" class="book-now-btn" onclick="bookNow()">Book Now</a>
+        </div>
+      </section>
+
+      <!-- Recommendations Section (will be populated by JavaScript) -->
+      <div class="recommendations-section" id="recommendationsSection">
+        <h2>Recommended Destinations</h2>
+        <div class="recommendations-grid" id="recommendationsGrid"></div>
+      </div>
+    </section>
+
+    <!-- About Us Page -->
+    <section id="about" class="page">
+      <div class="about-section">
+        <h2>About TravelBloom</h2>
+        <p>
+          TravelBloom is a premier travel recommendation service dedicated to
+          helping you discover the most beautiful and exciting destinations
+          around the world. Our mission is to inspire and facilitate travel
+          experiences that create lasting memories.
+        </p>
+        <p>
+          Founded in 2010, we've grown from a small team of travel enthusiasts
+          to a global platform serving millions of travelers each year. Our
+          recommendations are carefully curated by our team of experts who have
+          personally visited and vetted each destination.
+        </p>
+
+        <div class="team-section">
+          <h3>Our Team</h3>
+          <div class="team-members">
+            <div class="team-member">
+              <img
+                src="https://randomuser.me/api/portraits/women/32.jpg"
+                alt="Sarah Johnson"
+              />
+              <h4>Sarah Johnson</h4>
+              <p>CEO & Founder</p>
+            </div>
+            <div class="team-member">
+              <img
+                src="https://randomuser.me/api/portraits/men/44.jpg"
+                alt="Michael Chen"
+              />
+              <h4>Michael Chen</h4>
+              <p>Head of Travel Research</p>
+            </div>
+            <div class="team-member">
+              <img
+                src="https://randomuser.me/api/portraits/women/68.jpg"
+                alt="Emma Rodriguez"
+              />
+              <h4>Emma Rodriguez</h4>
+              <p>Customer Experience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Page -->
+    <section id="contact" class="page">
+      <div class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="src/travel_logic.js"></script>
   </body>
 </html>
